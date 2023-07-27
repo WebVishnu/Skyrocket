@@ -42,7 +42,7 @@ const ServicesSection = () => {
           <p
             className={`${lato.className} w-100 mt-2 font-light text-gray-500 text-sm`}
           >
-            Unleash Your Brand's True Essence! Discover Our Awesome Brand Identity Services, Tailored to Captivate and Inspire Your Audience
+            Unleash Your Brand&apos;s True Essence! Discover Our Awesome Brand Identity Services, Tailored to Captivate and Inspire Your Audience
           </p>
         </div>
         <div className="lg:me-5 hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all cursor-pointer mt-10 border-2 rounded-lg py-5 px-8  border-black">
@@ -89,7 +89,7 @@ const ServicesSection = () => {
           <p
             className={`${lato.className} w-100 mt-2 font-light text-gray-500 text-sm`}
           >
-            Imagine the Possibilities for Your Brand! With Our Brand Vision Service, We'll Create a Clear Roadmap to Turn Your Business Dreams into Reality
+            Imagine the Possibilities for Your Brand! With Our Brand Vision Service, We&apos;ll Create a Clear Roadmap to Turn Your Business Dreams into Reality
           </p>
         </div>
         <div className="lg:me-5 hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all cursor-pointer mt-10 border-2 rounded-lg py-5 px-8  border-black">
