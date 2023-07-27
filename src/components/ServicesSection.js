@@ -85,7 +85,7 @@ const ServicesSection = () => {
             className="mb-3"
             alt="branded"
           />
-          <h1 className={`text-2xl ${inter.className}`}>Brand’s Vision</h1>
+          <h1 className={`text-2xl ${inter.className}`}>Brand&apos;s Vision</h1>
           <p
             className={`${lato.className} w-100 mt-2 font-light text-gray-500 text-sm`}
           >

@@ -24,7 +24,7 @@ const ReviewSection = () => {
             Get a free review for your website in 24Hrs
           </h1>
           <p className="text-gray-500 text-light">
-            Unlock Your Website's Potential with a FREE Expert Review!
+            Unlock Your Website&apos;s Potential with a FREE Expert Review!
           </p>
 
           <ul>

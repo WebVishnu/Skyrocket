@@ -13,7 +13,7 @@ const IntroductionSection = () => {
       <SectionHeader
         title="Introducing BrandOPT"
         titleDesc="Boost your Business Growth"
-        desc="Unlock Your Brand's Potential with BRAND OPT: Where Identity Meets Ingenuity!"
+        desc="Unlock Your Brand&apos;s Potential with BRAND OPT: Where Identity Meets Ingenuity!"
       />
       <div className="flex justify-around flex-wrap pb-12">
         <a
@@ -39,7 +39,7 @@ const IntroductionSection = () => {
               Turn your ideas into thriving businesses! At BrandOPT, we
               specialize in converting your concepts into success stories. From
               website building to social media setup and captivating brand
-              identity services, we've got the tools you need.
+              identity services, we&apos;ve got the tools you need.
             </p>
           </div>
         </a>
