@@ -9,7 +9,7 @@ import ReviewSection from "@/components/ReviewSection";
 import PricingSection from "@/components/PricingSection";
 import FAQsection from "@/components/FAQsection";
 import Navbar from "@/components/Navbar";
-const inter = Inter({ subsets: ['latin'] , weight:['700'] });
+const inter = Inter({ subsets: ["latin"] , weight:["700"] });
 
 export default function Home() {
   return (
