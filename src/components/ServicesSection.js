@@ -94,7 +94,7 @@ const ServicesSection = () => {
         </div>
         <div className="lg:me-5 hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all cursor-pointer mt-10 border-2 rounded-lg py-5 px-8  border-black">
           <Image
-            src={"/images/ph-eye-bold.svg"}
+            src={"/images/asset-management.svg"}
             height={40}
             width={40}
             className="mb-3"

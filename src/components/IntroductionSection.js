@@ -9,16 +9,16 @@ const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 
 const IntroductionSection = () => {
   return (
-    <div className="mt-[10em]">
+    <div className="mt-[10em]" id="introduction-section">
       <SectionHeader
         title="Introducing BrandOPT"
         titleDesc="Boost your Business Growth"
         desc="Unlock Your Brand&apos;s Potential with BRAND OPT: Where Identity Meets Ingenuity!"
       />
-      <div className="flex justify-around flex-wrap pb-12">
+      <div className="flex justify-around pb-12 lg:flex-nowrap flex-wrap">
         <a
           href="#pricing-section"
-          className="lg:w-1/3 cursor-pointer hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all w-100 lg:me-5 mt-10 border-2 rounded-lg py-5 px-8 flex flex-col md:items-start items-center  border-black"
+          className="lg:w-[50%] cursor-pointer hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all w-100 lg:me-5 mt-10 border-2 rounded-lg py-5 px-8 flex flex-col md:items-start items-center  border-black"
         >
           <Image
             src={"/images/branded-workshop.svg"}
@@ -45,7 +45,7 @@ const IntroductionSection = () => {
         </a>
         <a
           href="#pricing-section"
-          className="lg:w-1/3 cursor-pointer hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all w-100 lg:me-5 mt-10 border-2 rounded-lg py-5 px-8 flex flex-col md:items-start items-center  border-black"
+          className="lg:w-[50%] cursor-pointer hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all w-100 lg:me-5 mt-10 border-2 rounded-lg py-5 px-8 flex flex-col md:items-start items-center  border-black"
         >
           <Image
             src={"/images/optimize-icon.svg"}

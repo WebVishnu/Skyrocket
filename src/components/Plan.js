@@ -1,22 +1,33 @@
+"use client"
 import React from "react";
 // fonts
 import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: ["700"] });
 
-
 const Plan = (props) => {
   return (
-    <div className={`flex flex-col ${props.bg} items-center border-2 border-black rounded-lg px-12 py-10 w-[100%] h-[40em]`}>
-      <h1 className="text-2xl font-bold">{props.title}</h1>
+    <div
+      onClick={() => {
+        window.open(props.url, "_blank");
+      }}
+      className={`flex cursor-pointer flex-col ${props.bg} items-center border-2 border-black rounded-lg px-12 py-10 w-[100%] h-[40em]`}
+    >
+      <h1 className="text-3xl font-bold text-center">{props.title}</h1>
       <p className="text-center">{props.desc}</p>
       <h1 className="mt-[2em] text-4xl font-bold">${props.price}</h1>
-      <h6 className="uppercase font-bold text-black">{props.pricingDesc}</h6>
+      <h6 className={`${lato.className} text-sm italic text-black`} style={{fontStyle: "italic"}}>{props.pricingDesc}</h6>
       <hr className="w-48 h-[2px] mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-black" />
       <h5 className="self-start uppercase font-bold">What&apos;s Included :</h5>
       <ul className="self-start my-5">
-        {props.features && props.features.map((feature) => (
-          <li className={`my-2 ${lato.className} text-gray-800`} key={feature}>{feature}</li>
-        ))}
+        {props.features &&
+          props.features.map((feature) => (
+            <li
+              className={`my-2 ${lato.className} text-gray-800`}
+              key={feature}
+            >
+              {feature}
+            </li>
+          ))}
       </ul>
       <a
         href={props.url}
