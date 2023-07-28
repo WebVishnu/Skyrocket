@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import SectionHeader from "./SectionHeader";
+import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -10,9 +12,21 @@ import {
 const FAQsection = () => {
   return (
     <div>
+      <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: "-10px" }}
+          whileInView={{ opacity: 1, y: "0" }}
+          transition={{ delay: 0.2 }}
+        >
       <SectionHeader
         title="FAQs"
-      />
+      /></motion.div>
+      <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0, y: "0px" }}
+          whileInView={{ opacity: 1, y: "0" }}
+          transition={{ delay: 0.4 }}
+        >
       <div className="md:max-w-[50vw] max-w-[90vw] w-[100vw] mx-auto py-12">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
@@ -59,6 +73,7 @@ const FAQsection = () => {
           </AccordionItem>
         </Accordion>
       </div>
+      </motion.div>
     </div>
   );
 };

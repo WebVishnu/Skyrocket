@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsDiscord } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 // fonts
 import { Lato } from "next/font/google";
@@ -29,7 +30,11 @@ const Navbar = () => {
   // }, [clientWindowHeight]);
 
   return (
-    <div
+    <motion.div
+      viewport={{ once: true }}
+      initial={{ opacity: 0, y: "-100px" }}
+      whileInView={{ opacity: 1, y: "0" }}
+      transition={{ease: "easeOut"}}
       className={`navbar ${lato.className} 2xl:px-[10em] px-[1em] py-[20px] grid grid-cols-3 place-items-center place-content-center  top-0 left-0 fixed w-[100vw] bg-white  z-30 border-b-2 border-[#000]`}
     >
       <div className="place-self-start">
@@ -61,7 +66,7 @@ const Navbar = () => {
           </button>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

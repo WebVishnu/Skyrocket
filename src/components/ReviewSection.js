@@ -1,6 +1,8 @@
+"use client"
 import React from "react";
 import SectionHeader from "./SectionHeader";
 import Image from "next/image";
+import { motion } from "framer-motion";
 // fonts
 import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: ["700", "900"] });
@@ -10,7 +12,20 @@ const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 const ReviewSection = () => {
   return (
     <div className={`${lato.className}`} id="review-section">
-      <SectionHeader title="Need Review" />
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: "-10px" }}
+        whileInView={{ opacity: 1, y: "0" }}
+        transition={{delay:0.2}}
+      >
+        <SectionHeader title="Need Review" />
+      </motion.div>
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: "-10px" }}
+        whileInView={{ opacity: 1, y: "0" }}
+        transition={{delay:0.3}}
+      >
       <div className="flex md:flex-row items-center justify-between flex-wrap flex-col-reverse">
         <Image
           src={"/images/review-img.svg"}
@@ -70,13 +85,17 @@ const ReviewSection = () => {
               Actionable Feedback and Insights
             </li>
           </ul>
-          <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfxMjnLKC8R2IHZquJog2sML34XlHlA2FDnbmNfEoNyxyvgGw/viewform?usp=sf_link">
+          <a
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfxMjnLKC8R2IHZquJog2sML34XlHlA2FDnbmNfEoNyxyvgGw/viewform?usp=sf_link"
+          >
             <button className="px-8 py-3 border-2 border-black rounded-lg mt-8 hover:bg-black hover:text-white transition-all">
               Get a free review now
             </button>
           </a>
         </div>
       </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-![Brandopt Logo](/public/LOGO.svg)
+![Brandopt Logo](/public/images/logo.svg)
 # Brandopt 
 
 
