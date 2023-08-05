@@ -57,7 +57,7 @@ const HeroSection = () => {
             className=" text-center"
           >
             <p className="mb-8 md:text-lg text-sm md:max-w-[60%] mx-auto">
-              Have entrepreneurial dreams but struggled to start? Don't worry we
+              Have entrepreneurial dreams but struggled to start? Don&apos;t worry we
               got you covered.
             </p>
           </motion.div>
