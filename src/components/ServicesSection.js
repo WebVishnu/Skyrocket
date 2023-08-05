@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 
 const ServicesSection = () => {
   return (
-    <div id="services-section">
+    <div id="services-section" className=" max-w-[1400px] px-[1.5em]">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "-10px" }}

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "brandopt",
+  "private_key_id": "766c3b6153f986fa7f121c8d2ed72f2910f3f735",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEugIBADANBgkqhkiG9w0BAQEFAASCBKQwggSgAgEAAoIBAQC0zisGeD+TPfQP\nac3q1rmwkWZ7odf0gCUNJjbLIxMx7EiaQP7/h0l88+yDIXJSUZUjiVcyuMrjr84Z\nyyMMFfke9IIGZAdlxTws7+Cws741ri9URiIv5L7Bq2g3KkyY41wk20ycURQUDkR3\nKWevYPixQvfAoPOPNLqVr64GLX20q7B2IAankVX198hVFsvtESDwOV+8rTrmXec0\nao7qYx1+2aeJ7fnCH/ey/Huzmvd9/YXMUi69aEaQY5GhfmgocSd8kwqrCqPUjLF8\nm26TnJk8T7mEIV7Qf3F7KY8T8IqAthtvRDcC6UB//cnR4y1ByiiXcdptEAVIpuNF\nmJhbgAkPAgMBAAECgf9TG79oa/8P7LK3sPBJo4AxxRNcDtafLhuXFrFb2xcIW5mf\npxQrYN1sVQwwL1aPafC6EYMqY7u9qkQX+01/csa8x1mCwwi5uW+yb97SvpSqko1m\nguyjTtWBn6cg1cWMPp0Loe6w9taid6mn5OuG5BGvUx6aAwi55rT+1mN7MLCza3FF\nJ6Mna7M2Bbnz6KP167jW4B+vWxBwx+lOfM16OA5kcmT4KVwJjez17QLdMfJCw1QU\nkKxLT9M2mSaujbmbZ+ieTcrGgL7j0Hsqg2DGcnoX/auPLcNcfBw9LcurVm7Afe4k\n5kBNIlaqOdXEhxbC/aMQH+6LJ+P8LUpVLXGqzhECgYEA7F35f4cVqlR9US4EFJV2\nqPBVoyWPIDu/leRCW93jZQQye38VniMRUBbmM2DgBBYiZHbiYPpDXyECejpm6/jT\nlU7BNyWCOtyDn83rsLcb3lUBnsvFmUX+3KQOZ6+GPmYhgVJScc0/2LhmzraCm5hD\ndRNqBRT1sQ87tWcWsVy9718CgYEAw9K/lPljEHUzYKXPQww54FSp+hUOwlb2Rlb/\nhpkmc6lHHBj1b/NVG67Clj9E/NGG/XKcp4YrH7UFNhoH5EK4lraynj0NWoqDyu0s\ndBIiusRs1rKJ/ERk4cXge2KEdyKkhZ9rZpBuXNGqOrsOHgPHMZP3eyrjhGTILIYj\nbC44NFECgYBQq1X+lzzmsAVBEoJkAArKZ5PipWvupVWis4+OSPFVxZPxIBNhsDg1\nbEtOl6581o0QWp6yWFdr/RkaXBpKSNb1azZ4Or3yltX5UU8yNZw2Si7OYl9jC0eL\nSBZ+fqJDY5nlyBHJMzKqJW04+YMj1ViYeXLCnz+nGTrYk4FkMPHF4wKBgBeOptV5\nGt3D+6ZIzCI4uk2uYbRgDCJ866uSk7LRgbqwRomuxvfswfROlcIVYms3mZGr1ASj\nM1ThJftYLlLbY/FdkSdQGOcneqtS1OIxvFPThXRejhL291vhvhuZwm3CkSAyCW2R\nOnWYE251SkF6GuBv+HmssyoeJaaVjHVbKg/BAoGAAQItFWTN4uLGf1PkQx5cTwT1\nfbEgVeNnebEDOLh0TuEYGQqm4UH4uwgzoXssB6nbusF555RGin/8eWmyw+tSLcZQ\ndcYsvdvanT1NZmG50JTIOIzZiDPlYwk664vNNiApVVpLfukub5TkvAKKcVds1/Yz\n3mnVfv2+0Nz9aHDn4Uk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "contact-us@brandopt.iam.gserviceaccount.com",
+  "client_id": "110273367828574549502",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/contact-us%40brandopt.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

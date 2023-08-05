@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 
 const IntroductionSection = () => {
   return (
-    <div className="mt-[10em]" id="introduction-section">
+    <div className="mt-[5em]  max-w-[1400px] px-[1.5em]">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "-10px" }}
@@ -31,7 +31,7 @@ const IntroductionSection = () => {
       >
         <div className="flex justify-around pb-12 lg:flex-nowrap flex-wrap">
           <a
-            href="#pricing-section"
+            href="#get-started-section"
             className="lg:w-[50%] cursor-pointer hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all w-100 lg:me-5 mt-10 border-2 rounded-lg py-5 px-8 flex flex-col md:items-start items-center  border-black"
           >
             <Image
@@ -41,24 +41,24 @@ const IntroductionSection = () => {
               className="mb-3"
               alt="branded"
             />
-            <div>
-              <h1
-                className={`text-3xl ${inter.className} md:text-right text-center`}
-              >
-                Create A Brand
-              </h1>
-              <p
-                className={`${lato.className} w-100 mt-2 md:text-right text-center font-light text-gray-500 text-sm`}
-              >
-                Turn your ideas into thriving businesses! At BrandOPT, we
-                specialize in converting your concepts into success stories.
-                From website building to social media setup and captivating
-                brand identity services, we&apos;ve got the tools you need.
-              </p>
-            </div>
+              <div>
+                <h1
+                  className={`text-3xl ${inter.className} md:text-right text-center`}
+                >
+                  Create A Brand
+                </h1>
+                <p
+                  className={`${lato.className} w-100 mt-2 md:text-right text-center font-light text-gray-500 text-sm`}
+                >
+                  Turn your ideas into thriving businesses! At BrandOPT, we
+                  specialize in converting your concepts into success stories.
+                  From website building to social media setup and captivating
+                  brand identity services, we&apos;ve got the tools you need.
+                </p>
+              </div>
           </a>
           <a
-            href="#pricing-section"
+            href="#get-started-section"
             className="lg:w-[50%] cursor-pointer hover:shadow-[10px_10px_0px_0px_#FF72AC] transition-all w-100 lg:me-5 mt-10 border-2 rounded-lg py-5 px-8 flex flex-col md:items-start items-center  border-black"
           >
             <Image

@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="flex justify-center overflow-x-hidden">
+    <html lang="en" className=" overflow-x-hidden">
       <body
-        className={`${inter.className} max-w-[1400px] px-[1.5em] overflow-x-hidden`}
+        className={`${inter.className} overflow-x-hidden`}
       >
         {children}
       </body>

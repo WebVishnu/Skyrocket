@@ -32,14 +32,15 @@ const Navbar = () => {
   return (
     <motion.div
       viewport={{ once: true }}
-      initial={{ opacity: 0, y: "-100px" }}
+      initial={{ opacity: 0, y: "-10px" }}
       whileInView={{ opacity: 1, y: "0" }}
       transition={{ease: "easeOut"}}
-      className={`navbar ${lato.className} 2xl:px-[10em] px-[1em] py-[20px] grid grid-cols-3 place-items-center place-content-center  top-0 left-0 fixed w-[100vw] bg-white  z-30 border-b-2 border-[#000]`}
+      style={{backgroundColor:"#fff"}}
+      className={`navbar ${lato.className} 2xl:px-[10em] px-[1em] py-[10px] grid grid-cols-3 place-items-center place-content-center  top-0 left-0 fixed w-[100vw] bg-black  z-30 border-b-2 border-[#000]`}
     >
       <div className="place-self-start">
         <a href="#introduction-section">
-          <Image src="/images/logo.svg" alt="logo" height={60} width={60} />
+          <Image src="/images/logo.svg" alt="logo" height={40} width={40} />
         </a>
         {/* <hr className="nav-divider absolute bottom-[-20px] transition-all left-[-14px] w-[86px] h-[2px] bg-white border-0 rounded"></hr> */}
       </div>
@@ -48,16 +49,19 @@ const Navbar = () => {
           <a href="#services-section"> Services</a>
         </li>
         <li className="mx-5 hover:text-[#e0015e]">
-          <a href="#pricing-section">Pricing</a>
+          <a href="#faq-section">FAQs</a>
+        </li>
+        <li className="mx-5 hover:text-[#e0015e]">
+          <a href="#review-section">Free&nbsp;review</a>
         </li>
         <li className="mx-5 text-[#e0015e] hover:text-[#000000]">
-          <a href="#review-section">Get&nbsp;Free&nbsp;Review</a>
+          <a href="#get-started-section">Get&nbsp;Started</a>
         </li>
       </ul>
       <div className="place-self-end">
         <a href="https://discord.gg/wChjThXyzh" target="_blank">
           <button
-            className={`rounded-lg hover:bg-black hover:text-white transition-all bg-transparent py-3 px-5 text-sm flex items-center whitespace-nowrap border-2 border-black`}
+            className={`rounded-lg hover:bg-black hover:text-white transition-all bg-transparent py-2 px-5 text-sm flex items-center whitespace-nowrap border-2 border-black`}
           >
             Join Discord&nbsp;&nbsp;&nbsp;
             <span className="text-xl">
