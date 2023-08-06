@@ -23,7 +23,13 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover opacity-20"
         >
+          <source src={"/video/HeroSection.avi"} type="video/avi" />
+          <source src={"/video/HeroSection.flv"} type="video/flv" />
+          <source src={"/video/HeroSection.mkv"} type="video/mkv" />
+          <source src={"/video/HeroSection.mov"} type="video/mov" />
           <source src={"/video/HeroSection.mp4"} type="video/mp4" />
+          <source src={"/video/HeroSection.webm"} type="video/webm" />
+          <source src={"/video/HeroSection.wmv"} type="video/wmv" />
         </video>
       </motion.div>
       <div className="flex justify-around items-center h-full pt-[4em] lg:flex-nowrap flex-wrap text-white lg:px-[3em] px-[1.5em]">

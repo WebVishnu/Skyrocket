@@ -46,12 +46,13 @@ const GetStartedSection = () => {
           Description: data.description,
         })
         .then((res) => {
-          console.log(res.data.data);
           $(".submitBtn").html("Send us a Message").attr("type", "submit");
           reset()
         })
         .catch((e) => {
-          console.log(e.message);
+          $(".submitBtn").html("Send us a Message").attr("type", "submit");
+          reset()
+          console.log(e);
         });
     } catch (error) {
       console.error("Error fetching data:", error);

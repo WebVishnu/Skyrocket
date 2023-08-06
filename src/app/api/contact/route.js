@@ -5,7 +5,6 @@ export async function POST(request) {
   try {
     const { Name, Email, Budget, Category, CompanyName, Description } =
       await request.json();
-    console.log(Name);
     const auth = new google.auth.JWT(
       process.env.GOOGLE_CLIENT_EMAIL,
       null,
@@ -17,7 +16,7 @@ export async function POST(request) {
       ]
     );
     await auth.authorize();
-    const sheets = google.sheets({
+    const sheets = await google.sheets({
       version: "v4",
       auth,
     });
