@@ -32,7 +32,7 @@ export async function POST(request) {
     });
     return NextResponse.json({ response });
   } catch (e) {
-    console.log(e,process.env.GOOGLE_CLIENT_EMAIL);
+    console.log(e.message);
     return NextResponse.json({ error: true, message: e.message });
   }
 }

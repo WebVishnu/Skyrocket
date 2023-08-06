@@ -35,9 +35,10 @@ const GetStartedSection = () => {
   // handling sign in
   const contactUs = async (data) => {
     try {
+      // console.log(`${(hostname == "localhost")?`http://localhost:3000`:`https://${hostname}`}/api/contact`)
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
-        .post("https://skyrocket-git-master-vishnu9412.vercel.app/api/contact", {
+        .post(`https:/brandopt.in/api/contact`, {
           Name: data.name,
           Email: data.email,
           Budget: data.budget,
