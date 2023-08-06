@@ -37,7 +37,7 @@ const GetStartedSection = () => {
     try {
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
-        .post("https://www.brandopt.in/api/contact", {
+        .post("http://brandopt.in/api/contact", {
           Name: data.name,
           Email: data.email,
           Budget: data.budget,
@@ -110,7 +110,7 @@ const GetStartedSection = () => {
           <Controller
             name="budget"
             control={control}
-            defaultValue=""
+            defaultValue="null"
             render={({ field }) => (
               <select
                 className=" my-2 border-2 border-black w-full rounded-md py-3 px-5 text-[#7e7e7e]"
