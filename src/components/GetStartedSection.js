@@ -11,7 +11,6 @@ import $ from "jquery";
 import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: ["700", "900"] });
 import { Inter } from "next/font/google";
-import { useRouter } from "next/router";
 const inter = Inter({ subsets: ["latin"], weight: ["600"] });
 
 // Schema for form validation
@@ -38,7 +37,7 @@ const GetStartedSection = () => {
       // console.log(`${(hostname == "localhost")?`http://localhost:3000`:`https://${hostname}`}/api/contact`)
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
-        .post(`https://www.brandopt.in/api/contact`, {
+        .post(`http://www.brandopt.in/api/contact`, {
           Name: data.name,
           Email: data.email,
           Budget: data.budget,
