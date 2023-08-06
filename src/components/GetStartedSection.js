@@ -38,7 +38,7 @@ const GetStartedSection = () => {
       // console.log(`${(hostname == "localhost")?`http://localhost:3000`:`https://${hostname}`}/api/contact`)
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
-        .post(`https://brandopt.in/api/contact`, {
+        .post(`https://www.brandopt.in/api/contact`, {
           Name: data.name,
           Email: data.email,
           Budget: data.budget,
