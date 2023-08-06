@@ -20,16 +20,10 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          playsInline
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-30"
         >
-          <source src={"/video/HeroSection.avi"} type="video/avi" />
-          <source src={"/video/HeroSection.flv"} type="video/flv" />
-          <source src={"/video/HeroSection.mkv"} type="video/mkv" />
-          <source src={"/video/HeroSection.mov"} type="video/mov" />
           <source src={"/video/HeroSection.mp4"} type="video/mp4" />
-          <source src={"/video/HeroSection.webm"} type="video/webm" />
-          <source src={"/video/HeroSection.wmv"} type="video/wmv" />
+          Your browser does not support the video tag.
         </video>
       </motion.div>
       <div className="flex justify-around items-center h-full pt-[4em] lg:flex-nowrap flex-wrap text-white lg:px-[3em] px-[1.5em]">
@@ -63,8 +57,8 @@ const HeroSection = () => {
             className=" text-center"
           >
             <p className="mb-8 md:text-lg text-sm md:max-w-[60%] mx-auto">
-              Have entrepreneurial dreams but struggled to start? Don&apos;t worry we
-              got you covered.
+              Have entrepreneurial dreams but struggled to start? Don&apos;t
+              worry we got you covered.
             </p>
           </motion.div>
           <motion.div

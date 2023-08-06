@@ -34,7 +34,6 @@ const GetStartedSection = () => {
   // handling sign in
   const contactUs = async (data) => {
     try {
-      // console.log(`${(hostname == "localhost")?`http://localhost:3000`:`https://${hostname}`}/api/contact`)
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
         .post(`https://www.brandopt.in/api/contact`, {
