@@ -37,7 +37,7 @@ const GetStartedSection = () => {
     try {
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
-        .post("http://brandopt.in/api/contact", {
+        .post("skyrocket-git-master-vishnu9412.vercel.app/api/contact", {
           Name: data.name,
           Email: data.email,
           Budget: data.budget,
