@@ -3,12 +3,13 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
+    const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n');
     const { Name, Email, Budget, Category, CompanyName, Description } =
       await request.json();
     const auth = new google.auth.JWT(
       process.env.GOOGLE_CLIENT_EMAIL,
       null,
-      process.env.GOOGLE_PRIVATE_KEY,
+      privateKey,
       [
         "https://www.googleapis.com/auth/drive",
         "https://www.googleapis.com/auth/drive.file",
@@ -31,7 +32,7 @@ export async function POST(request) {
     });
     return NextResponse.json({ response });
   } catch (e) {
-    console.log(e);
+    console.log(e,process.env.GOOGLE_CLIENT_EMAIL);
     return NextResponse.json({ error: true, message: e.message });
   }
 }
