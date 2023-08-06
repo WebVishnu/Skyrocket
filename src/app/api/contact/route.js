@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n');
+    const privateKey = process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
     const { Name, Email, Budget, Category, CompanyName, Description } =
       await request.json();
     const auth = new google.auth.JWT(
@@ -30,9 +30,25 @@ export async function POST(request) {
         values: [[Name, Email, Budget, Category, CompanyName, Description]],
       },
     });
-    return NextResponse.json({ response });
+    return new Response({
+      response,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   } catch (e) {
     console.log(e.message);
-    return NextResponse.json({ error: true, message: e.message });
+    return new Response({
+      error: true,
+      message: e.message,
+      status: 403,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+    });
   }
 }
