@@ -22,7 +22,13 @@ const HeroSection = () => {
           muted
           className="w-full h-full object-cover opacity-30"
         >
-          <source src={"/video/HeroSection.mp4"} type="video/mp4" />
+          <source src={"/video/heroSection.mp4"} type="video/mp4" />
+          <source src={"/video/heroSection.avi"} type="video/avi" />
+          <source src={"/video/heroSection.flv"} type="video/flv" />
+          <source src={"/video/heroSection.mkv"} type="video/mkv" />
+          <source src={"/video/heroSection.mov"} type="video/mov" />
+          <source src={"/video/heroSection.webm"} type="video/webm" />
+          <source src={"/video/heroSection.wmv"} type="video/wmv" />
           Your browser does not support the video tag.
         </video>
       </motion.div>
@@ -57,8 +63,8 @@ const HeroSection = () => {
             className=" text-center"
           >
             <p className="mb-8 md:text-lg text-sm md:max-w-[60%] mx-auto">
-              Have entrepreneurial dreams but struggled to start? Don&apos;t
-              worry we got you covered.
+              Have entrepreneurial dreams but struggled to start? Don&apos;t worry we
+              got you covered.
             </p>
           </motion.div>
           <motion.div
