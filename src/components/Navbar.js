@@ -19,16 +19,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   });
 
-  // useEffect(() => {
-  //   if (clientWindowHeight > 10) {
-  //     $(".nav-divider").css({ width: "200vw", left: "calc(-70vw - 86px)" });
-  //     $(".navbar").addClass("bg-black").removeClass("bg-transparent");
-  //   } else {
-  //     $(".nav-divider").css({ width: "86px", left: "-14px" });
-  //     $(".navbar").addClass("bg-transparent").removeClass("bg-black");
-  //   }
-  // }, [clientWindowHeight]);
-
   return (
     <motion.div
       viewport={{ once: true }}
@@ -59,7 +49,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="place-self-end">
-        <a href="https://discord.gg/wChjThXyzh" target="_blank">
+        <a href="https://discord.gg/k43uEbHzbA" target="_blank">
           <button
             className={`rounded-lg hover:bg-black hover:text-white transition-all bg-transparent py-2 px-5 text-sm flex items-center whitespace-nowrap border-2 border-black`}
           >

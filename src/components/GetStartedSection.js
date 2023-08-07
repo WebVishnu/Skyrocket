@@ -15,12 +15,12 @@ const inter = Inter({ subsets: ["latin"], weight: ["600"] });
 
 // Schema for form validation
 const schema = yup.object().shape({
-  name: yup.string().required("name is required"),
-  email: yup.string().required("email is required"),
+  name: yup.string().required("Name is required"),
+  email: yup.string().required("Email is required"),
   budget: yup.string(),
   category: yup.string().required("Please Select Category"),
-  companyName: yup.string().required("company name is required"),
-  description: yup.string().required("description name is required"),
+  companyName: yup.string().required("Company name is required"),
+  description: yup.string().required("Description name is required"),
 });
 
 const GetStartedSection = () => {
@@ -45,12 +45,18 @@ const GetStartedSection = () => {
           Description: data.description,
         })
         .then((res) => {
-          $(".submitBtn").html("Send us a Message").attr("type", "submit");
-          reset()
+          $(".form").css({ display: "none" });
+          $(".video-div").css({ display: "flex" });
+          $(".video").trigger("play");
+
+          reset();
         })
         .catch((e) => {
-          $(".submitBtn").html("Send us a Message").attr("type", "submit");
-          reset()
+          $(".form").css({ display: "none" });
+          $(".video-div").css({ display: "flex" });
+          $(".video").trigger("play");
+
+          reset();
           console.log(e);
         });
     } catch (error) {
@@ -61,15 +67,19 @@ const GetStartedSection = () => {
     <div
       className={`${inter.className} ${lato.className}  max-w-[1400px] xl:w-[1400px] px-[1.5em]`}
     >
-      <SectionHeader
-        title="Get Started"
-      />
+      <SectionHeader title="Get Started" />
+      <div className="hidden justify-center video-div">
+        <video muted className="video user-select-none">
+          <source src={"/video/formSubmitted.mp4"} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "20px" }}
         whileInView={{ opacity: 1, y: "0" }}
         transition={{ ease: "easeOut" }}
-        className=" flex justify-center"
+        className=" flex justify-center form"
       >
         <form
           onSubmit={handleSubmit(contactUs)}
