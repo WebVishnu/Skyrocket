@@ -6,9 +6,9 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 
 const SectionHeader = (props) => {
-  const title = props.title.split(" ");
+  const title = props.title.split(" ").map(word => word + " ");
   return (
-    <div className="flex justify-between items-center flex-wrap my-12">
+    <div className="flex justify-between items-center flex-wrap my-8">
       <h1 className={`${inter.className} text-3xl`}>
         {title.slice(0,title.length - 1)} <span className="before:h-[10px] relative before:w-[100%] before:bg-[#FF72AC] before:absolute before:bottom-0 before:z-[-1]">{title[title.length - 1]}</span> <br />{" "}
         {props.titleDesc && (

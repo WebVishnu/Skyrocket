@@ -10,11 +10,11 @@ const Plan = (props) => {
       onClick={() => {
         window.open(props.url, "_blank");
       }}
-      className={`flex cursor-pointer flex-col ${props.bg} items-center border-2 border-black rounded-lg px-12 py-10 w-[100%] h-[40em]`}
+      className={`flex cursor-pointer flex-col ${props.bg} items-center border-2 border-black rounded-lg px-12 py-5 w-[100%] min-h-[40em]`}
     >
       <h1 className="text-3xl font-bold text-center">{props.title}</h1>
       <p className="text-center">{props.desc}</p>
-      <h1 className="mt-[2em] text-4xl font-bold">${props.price}</h1>
+      <h1 className="mt-[1em] text-4xl font-bold">${props.price}</h1>
       <h6 className={`${lato.className} text-sm italic text-black`} style={{fontStyle: "italic"}}>{props.pricingDesc}</h6>
       <hr className="w-48 h-[2px] mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-black" />
       <h5 className="self-start uppercase font-bold">What&apos;s Included :</h5>

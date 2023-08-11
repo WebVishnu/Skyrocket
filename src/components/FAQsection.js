@@ -11,7 +11,7 @@ import {
 
 const FAQsection = () => {
   return (
-    <div className=" max-w-[1400px] w-[1400px] px-[1.5em]" id="faq-section">
+    <div className="max-w-[1400px] xl:w-[1400px] px-[1.5em]" id="faq-section">
       <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0, y: "-10px" }}

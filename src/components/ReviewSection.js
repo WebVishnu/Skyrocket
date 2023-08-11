@@ -21,7 +21,7 @@ const ReviewSection = () => {
         whileInView={{ opacity: 1, y: "0" }}
         transition={{ delay: 0.2 }}
       >
-        <SectionHeader title="Need Review" />
+        <SectionHeader title="Is Your Website Due Update?" />
       </motion.div>
       <motion.div
         viewport={{ once: true }}

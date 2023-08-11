@@ -11,6 +11,7 @@ import $ from "jquery";
 import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: ["700", "900"] });
 import { Inter } from "next/font/google";
+import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 const inter = Inter({ subsets: ["latin"], weight: ["600"] });
 
 // Schema for form validation
@@ -65,9 +66,8 @@ const GetStartedSection = () => {
   };
   return (
     <div
-      className={`${inter.className} ${lato.className}  max-w-[1400px] xl:w-[1400px] px-[1.5em]`}
+      className={`${inter.className} ${lato.className}  max-w-[1400px] xl:w-[1400px] px-[1.5em] mt-28`}
     >
-      <SectionHeader title="Get Started" />
       <div className="hidden justify-center video-div">
         <video muted className="video user-select-none">
           <source src={"/video/formSubmitted.mp4"} type="video/mp4" />
@@ -76,11 +76,29 @@ const GetStartedSection = () => {
       </div>
       <motion.div
         viewport={{ once: true }}
-        initial={{ opacity: 0, y: "20px" }}
+        initial={{ opacity: 0, y: "-50px" }}
         whileInView={{ opacity: 1, y: "0" }}
-        transition={{ ease: "easeOut" }}
-        className=" flex justify-center form"
+        transition={{ ease: "easeOut", duration: 0.5 }}
+        className=" flex justify-between form lg:flex-nowrap flex-wrap"
       >
+        <div>
+          <h1 className="text-7xl">
+            Let&apos;s Work <br /> Together
+          </h1>
+          <p className="lg:w-1/2 mt-5">
+            Exercitationem 30+ CLIENTS qui nemo sit rerum molestias suscipit
+            voluptatem. Esse optio aspernatur{" "}
+          </p>
+          <div className="flex lg:flex-col flex-row lg:items-start items-center lg:my-0 my-5">
+            <h6 className=" lg:mt-5 lg:mb-3">Follow Us:</h6>
+            <p className="flex justify-between w-28 lg:ms-0 ms-3">
+              {" "}
+              <BsTwitter className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " />{" "}
+              <BsInstagram className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " />{" "}
+              <BsLinkedin className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " />
+            </p>
+          </div>
+        </div>
         <form
           onSubmit={handleSubmit(contactUs)}
           className="max-w-[700px] xl:w-[700px] px-[.5em]"

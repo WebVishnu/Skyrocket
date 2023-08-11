@@ -6,17 +6,16 @@ import { motion } from "framer-motion";
 
 const PricingSection = () => {
   return (
-    <div id="pricing-section">
+    <div id="pricing-section" className="max-w-[1400px] xl:w-[1400px] px-[1.5em]">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "-10px" }}
         whileInView={{ opacity: 1, y: "0" }}
-        transition={{ delay: 0.2 }}
+        transition={{ delay: 0.5 }}
+        className="mt-28"
       >
         <SectionHeader
-          title="Our Pricing"
-          titleDesc="Business Plans"
-          desc="We offer a variety of Services. We offer a variety of Services We offer a variety of Services"
+          title="Explore Our Pricing Plans"
         />
       </motion.div>
       <div className="grid lg:grid-cols-3 grid-col-1 gap-16 place-items-center py-12">
@@ -29,12 +28,14 @@ const PricingSection = () => {
         >
           <Plan
             features={[
-              "Professional Logo",
-              "Professional Banner",
-              "Landing Page",
+              "Logo & Banner",
+              "Website Landing Page",
+              "Improved SEO",
+              "3 Revisions",
+              "1 month Free Maintenance"
             ]}
             bg="bg-[#fff]"
-            price="600"
+            price="1500+"
             pricingDesc="Price May Vary"
             title="Small"
             desc="Best for personal brands"
@@ -50,13 +51,15 @@ const PricingSection = () => {
         >
         <Plan
           features={[
-            "Professional Logo",
-            "Ads Banner",
-            "Social Media Setup",
-            "Custom Website (5-10 Pages)",
+            "Website + Landing Page",
+            "Improved SEO",
+            "Brand Identity",
+            "Advertising Graphics",
+            "5 Revisions",
+            "2 month Free Maintenance"
           ]}
           bg="bg-[#FF72AC]"
-          price="3000"
+          price="3000+"
           pricingDesc="Price May Vary"
           title="Medium"
           desc="Best for Ecommerce"
@@ -71,15 +74,16 @@ const PricingSection = () => {
         >
         <Plan
           features={[
+            "Website + Landing Page",
+            "Improved SEO",
             "Brand Identity",
-            "Brand Vision",
-            "Professional Logo",
-            "Ads Banner",
-            "Social Media Setup",
-            "Custom Website (10+ Pages)",
+            "Advertising Graphics",
+            "Corporate Assets",
+            "Unlimited Revisions",
+            "3 month Free Maintenance"
           ]}
           bg="bg-[#fff]"
-          price="8000"
+          price="4500+"
           pricingDesc="Price May Vary"
           title="Large"
           desc="Best for Large Scale Companies"
