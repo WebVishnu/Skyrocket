@@ -11,7 +11,7 @@ const lato = Lato({ subsets: ["latin"], weight: ["400"] });
 
 export const HowToWorkSection = () => {
   return (
-    <div className=" my-[5em] max-w-[1400px] xl:w-[1400px] px-[1.5em]">
+    <div className="my-[5em] max-w-[1400px] xl:w-[1400px] px-[1.5em]">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "-10px" }}
@@ -34,7 +34,7 @@ export const HowToWorkSection = () => {
           <p
             className={`${lato.className} w-100 mt-2 font-light text-gray-600 text-lg`}
           >
-            Pick the perfect package to match your project's needs!
+            Pick the perfect package to match your project&apos;s needs!
           </p>
         </motion.div>
         <BsPlus className="text-8xl m-3 md:w-auto w-full"/>
