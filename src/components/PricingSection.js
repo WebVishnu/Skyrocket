@@ -32,13 +32,13 @@ const PricingSection = () => {
               "Website Landing Page",
               "Improved SEO",
               "3 Revisions",
-              "1 month Free Maintenance"
+              "1 Month Free Maintenance"
             ]}
             bg="bg-[#fff]"
             price="1500+"
             pricingDesc="Price May Vary"
             title="Small"
-            desc="Best for personal brands"
+            desc="Best for Personal Brands"
             url="https://docs.google.com/forms/d/e/1FAIpQLSeLgunSQUUtHQEBkoyyY7EYBcu3X6xBZK8xeAnzwWnpsW49wg/viewform?usp=sf_link"
           />
         </motion.div>
@@ -56,13 +56,13 @@ const PricingSection = () => {
             "Brand Identity",
             "Advertising Graphics",
             "5 Revisions",
-            "2 month Free Maintenance"
+            "2 Month Free Maintenance"
           ]}
           bg="bg-[#FF72AC]"
           price="3000+"
           pricingDesc="Price May Vary"
           title="Medium"
-          desc="Best for Ecommerce"
+          desc="Best for E-commerce"
           url="https://docs.google.com/forms/d/e/1FAIpQLSezPMqWWFTao64M-mhm55f4wyad6Yh5wMdQbAXXbmzTndWRnQ/viewform?usp=sf_link"
         /></motion.div>
         <motion.div
@@ -78,9 +78,8 @@ const PricingSection = () => {
             "Improved SEO",
             "Brand Identity",
             "Advertising Graphics",
-            "Corporate Assets",
             "Unlimited Revisions",
-            "3 month Free Maintenance"
+            "3 Month Free Maintenance"
           ]}
           bg="bg-[#fff]"
           price="4500+"

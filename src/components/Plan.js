@@ -18,14 +18,14 @@ const Plan = (props) => {
       <h6 className={`${lato.className} text-sm italic text-black`} style={{fontStyle: "italic"}}>{props.pricingDesc}</h6>
       <hr className="w-48 h-[2px] mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-black" />
       <h5 className="self-start uppercase font-bold">What&apos;s Included :</h5>
-      <ul className="self-start my-5">
+      <ul className="self-start my-5 style">
         {props.features &&
           props.features.map((feature) => (
             <li
-              className={`my-2 ${lato.className} text-gray-800`}
+              className={`my-2 ms-2 ${lato.className} text-gray-800 text-md`}
               key={feature}
             >
-              {feature}
+              - {feature}
             </li>
           ))}
       </ul>

@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 
 const HeroSection = () => {
   return (
-    <div className="h-screen  w-screen relative bg-black flex flex-col">
+    <div className="h-screen  w-screen relative bg-black flex flex-col" id="hero-section">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "20px" }}
@@ -76,7 +76,7 @@ const HeroSection = () => {
               className={`mb-8 md:text-lg text-sm md:max-w-[60%] mx-auto ${inter.className}`}
             >
               Turning your business into brand. <br />
-              Plans Starting from 1000$
+              Plans Starting from $1500 
             </p>
           </motion.div>
           <motion.div

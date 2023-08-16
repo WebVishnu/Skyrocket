@@ -27,7 +27,7 @@ const Navbar = () => {
       whileInView={{ opacity: 1, y: "0" }}
       transition={{ease: "easeOut"}}
       style={{backgroundColor:"#fff"}}
-      className={`navbar ${lato.className} 2xl:px-[10em] px-[1em] py-[10px] grid grid-cols-2 place-items-center place-content-center  top-0 left-0 fixed w-[100vw] bg-black  z-30 border-b-2 border-[#000]`}
+      className={`navbar ${lato.className} 2xl:px-[10em] px-[1em] py-[10px] grid grid-cols-3 place-items-center place-content-center  top-0 left-0 fixed w-[100vw] bg-black  z-30 border-b-2 border-[#000]`}
     >
       <div className="place-self-start">
         <Link href="/">
@@ -35,20 +35,20 @@ const Navbar = () => {
         </Link>
         {/* <hr className="nav-divider absolute bottom-[-20px] transition-all left-[-14px] w-[86px] h-[2px] bg-white border-0 rounded"></hr> */}
       </div>
-      {/* <ul className="text-md flex md:opacity-100 md:visible invisible opacity-0">
+      <ul className="text-md flex md:opacity-100 md:visible invisible opacity-0">
         <li className="me-5 hover:text-[#e0015e]">
-          <a href="#services-section"> Services</a>
+          <a href="#hero-section"> Home</a>
         </li>
         <li className="mx-5 hover:text-[#e0015e]">
-          <a href="#faq-section">FAQs</a>
+          <a href="#testimonial-section">Testimonials</a>
         </li>
         <li className="mx-5 hover:text-[#e0015e]">
-          <a href="#review-section">Free&nbsp;review</a>
+          <a href="#pricing-section">Pricing</a>
         </li>
         <li className="mx-5 text-[#e0015e] hover:text-[#000000]">
-          <a href="#get-started-section">Get&nbsp;Started</a>
+          <a target="_blank" href="https://calendly.com/brandoptofficial/30min?month=2023-08">Book&nbsp;a&nbsp;Call</a>
         </li>
-      </ul> */}
+      </ul>
       <div className="place-self-end justify-self-end">
         <a href="https://discord.gg/k43uEbHzbA" target="_blank">
           <button

@@ -213,6 +213,7 @@ const GetStartedSection = () => {
           </button>
         </form>
       </motion.div>
+      <div></div>
     </div>
   );
 };

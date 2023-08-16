@@ -72,6 +72,7 @@ export const HowToWorkSection = () => {
           </p>
         </motion.div>
       </div>
+      <div  id="testimonial-section"></div>
     </div>
   );
 };

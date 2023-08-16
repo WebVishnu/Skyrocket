@@ -42,7 +42,7 @@ const TestimonialSection = () => {
           <h1 className={`text-3xl text-center`}>
             Our Goal is the help{" "}
             <span className="text-[#FF72AC] md:text-3xl text-2xl">
-              Founders&nbsp;and&nbsp;Enterpreneurs
+              Founders&nbsp;and&nbsp;Entrepreneurs
             </span>{" "}
             <br /> Improve their Businesses
           </h1>
