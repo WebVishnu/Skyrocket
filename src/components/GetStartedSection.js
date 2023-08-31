@@ -87,7 +87,7 @@ const GetStartedSection = () => {
             Let&apos;s Work <br /> Together
           </h1>
           <p className="lg:w-1/2 mt-5">
-            We're excited to hear from you and learn more about how we can help you with your business needs. Contact us today to get started.
+            We&apos;re excited to hear from you and learn more about how we can help you with your business needs. Contact us today to get started.
           </p>
           <div className="flex lg:flex-col flex-row lg:items-start items-center lg:my-0 my-5">
             <h6 className=" lg:mt-5 lg:mb-3">Connect with us:</h6>
