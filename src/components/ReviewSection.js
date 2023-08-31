@@ -3,16 +3,58 @@ import React from "react";
 import SectionHeader from "./SectionHeader";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import axios from "axios";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Controller, useForm } from "react-hook-form";
+import $ from "jquery";
+
 // fonts
 import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: ["700", "900"] });
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 
-const ReviewSection = () => {
+
+// Schema for form validation
+const schema = yup.object().shape({
+  website: yup.string().required("Please enter your website"),
+});
+
+const ReviewSection = () => { 
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(schema) });
+
+  // handling sign in
+  const submitAudit = async (data) => {
+    try {
+      $(".submitBtn").html("Please wait...").attr("type", "button");
+      axios
+        .post(`/api/audit`, {
+          website: data.website,
+        })
+        .then((res) => {
+          console.log(res)
+          $(".submitBtn").html("Submit").attr("type", "submit");
+          reset();
+        })
+        .catch((e) => {
+          reset();
+          console.log(e);
+        });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+
   return (
     <div
-      className={`${lato.className} max-w-[1400px] xl:w-[1400px] px-[1.5em]`}
+      className={`${lato.className} max-w-[1400px] xl:w-[1400px] px-[1.5em] mt-20`}
       id="review-section"
     >
       <motion.div
@@ -88,14 +130,22 @@ const ReviewSection = () => {
                 Actionable Feedback and Insights
               </li>
             </ul>
-            <a
-              target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfxMjnLKC8R2IHZquJog2sML34XlHlA2FDnbmNfEoNyxyvgGw/viewform?usp=sf_link"
-            >
-              <button className="px-8 py-3 border-2 border-black rounded-lg mt-8 hover:bg-black hover:text-white transition-all">
-                Get a free review now
+            <form onSubmit={handleSubmit(submitAudit)} className="flex items-center justify-start relative mt-7">
+              <Controller
+                name="website"
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <input type="text" placeholder="www.yoursite.com" className="border border-black py-4 px-5 pe-36 rounded-lg w-full" {...field} />
+                )}
+              />
+              {errors.website && (
+                <span className="text-red-700">{errors.website.message}</span>
+              )}
+              <button className="submitBtn px-8 py-2 border-2 border-black rounded-lg absolute right-2 hover:bg-black hover:text-white transition-all">
+              Submit
               </button>
-            </a>
+            </form>
           </div>
         </div>
       </motion.div>

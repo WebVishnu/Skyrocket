@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 const testimonialsData = [
   {
     name: "Samuel",
-    quote: "I recommend BrandOPT 100%. It has vast services for Brand Optimization and trustworthy. I will hire them again for future projects",
+    quote: "We're getting more positive feedback on our new website, all thanks to their hard work.",
   },
   {
     name: "Khurram",
-    quote: "BrandOPT helped speedup website up tremendously! Super easy to work with them and got the job done in just 2 days. Highly recommended",
+    quote: "We're so glad we partnered with them. Our website is now getting more leads.",
   },
   {
     name: "Lee Ping",
-    quote: "They completed their task quickly and efficiently, no complaints. I would happily hire them for another job.",
+    quote: "They completed their task quickly and efficiently, no complaints. Happy with the work",
   },
   {
     name: "Brett F",
-    quote: "BrandOPT did a fantastic job of optimizing my Website to get more clients in just 4 days. I will hire them again for this task.",
+    quote: "We've gotten so many more leads since they redesigned our website.",
   },
   {
     name: "Alexei",

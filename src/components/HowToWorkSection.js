@@ -4,14 +4,15 @@ import SectionHeader from "./SectionHeader";
 import { delay, motion } from "framer-motion";
 
 import { Inter, Lato } from "next/font/google";
-import {  BsPlus } from "react-icons/bs";
-import {  FaEquals } from "react-icons/fa";
+import { BsArrowRight, BsPlus } from "react-icons/bs";
+import { FaEquals } from "react-icons/fa";
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"], weight: ["600"] });
 const lato = Lato({ subsets: ["latin"], weight: ["400"] });
 
 export const HowToWorkSection = () => {
   return (
-    <div className="my-[5em] max-w-[1400px] xl:w-[1400px] px-[1.5em]">
+    <div className="mt-[5em] max-w-[1400px] xl:w-[1400px] px-[1.5em]">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "-10px" }}
@@ -37,7 +38,7 @@ export const HowToWorkSection = () => {
             Pick the perfect package to match your project&apos;s needs!
           </p>
         </motion.div>
-        <BsPlus className="text-8xl m-3 md:w-auto w-full"/>
+        <BsPlus className="text-8xl m-3 md:w-auto w-full" />
         <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0 }}
@@ -54,7 +55,7 @@ export const HowToWorkSection = () => {
             clients.
           </p>
         </motion.div>
-        <FaEquals className="text-5xl m-3 md:w-auto w-full"/>
+        <FaEquals className="text-5xl m-3 md:w-auto w-full" />
         <motion.div
           viewport={{ once: true }}
           initial={{ opacity: 0 }}
@@ -72,7 +73,23 @@ export const HowToWorkSection = () => {
           </p>
         </motion.div>
       </div>
-      <div  id="testimonial-section"></div>
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0, y: "-10px" }}
+        whileInView={{ opacity: 1, y: "0" }}
+        transition={{ delay: 0.2 }} className="flex w-full items-center justify-center mt-24 mb-12 pe-5">
+        <Link href="/contact">
+          <button
+            className={`rounded-lg bg-black transition-all text-white py-5 px-12 text-sm flex items-center whitespace-nowrap`}
+          >
+            Build your Brand&nbsp;&nbsp;&nbsp;
+            <span className="text-xl">
+              <BsArrowRight />
+            </span>
+          </button>
+        </Link>
+      </motion.div>
+      <div id="testimonial-section"></div>
     </div>
   );
 };

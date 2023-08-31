@@ -3,10 +3,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsDiscord } from "react-icons/bs";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // fonts
 import { Lato } from "next/font/google";
-import Link from "next/link";
 const lato = Lato({ subsets: ["latin"], weight: ["700"] });
 
 const Navbar = () => {
@@ -37,16 +37,16 @@ const Navbar = () => {
       </div>
       <ul className="text-md flex md:opacity-100 md:visible invisible opacity-0">
         <li className="me-5 hover:text-[#e0015e]">
-          <a href="#hero-section"> Home</a>
+          <Link href="/"> Home</Link>
         </li>
         <li className="mx-5 hover:text-[#e0015e]">
-          <a href="#testimonial-section">Testimonials</a>
+          <Link href="/#services-section">Services</Link>
         </li>
         <li className="mx-5 hover:text-[#e0015e]">
-          <a href="#pricing-section">Pricing</a>
+          <Link href="/#review-section">Free Audit</Link>
         </li>
         <li className="mx-5 text-[#e0015e] hover:text-[#000000]">
-          <a target="_blank" href="https://calendly.com/brandoptofficial/30min?month=2023-08">Book&nbsp;a&nbsp;Call</a>
+          <Link href="/contact">Place&nbsp;Order</Link>
         </li>
       </ul>
       <div className="place-self-end justify-self-end">

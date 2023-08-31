@@ -1,17 +1,17 @@
 "use client";
-import React, { useState } from "react";
-import SectionHeader from "./SectionHeader";
+import React from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import axios from "axios";
 import $ from "jquery";
+import { BsInstagram, BsLinkedin, BsTelegram, BsTwitter } from "react-icons/bs";
+import Link from "next/link";
 // fonts
 import { Lato } from "next/font/google";
 const lato = Lato({ subsets: ["latin"], weight: ["700", "900"] });
 import { Inter } from "next/font/google";
-import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 const inter = Inter({ subsets: ["latin"], weight: ["600"] });
 
 // Schema for form validation
@@ -37,7 +37,7 @@ const GetStartedSection = () => {
     try {
       $(".submitBtn").html("Please wait...").attr("type", "button");
       axios
-        .post(`https://www.brandopt.in/api/contact`, {
+        .post(`/api/contact`, {
           Name: data.name,
           Email: data.email,
           Budget: data.budget,
@@ -46,17 +46,15 @@ const GetStartedSection = () => {
           Description: data.description,
         })
         .then((res) => {
-          $(".form").css({ display: "none" });
-          $(".video-div").css({ display: "flex" });
+          $(".form").addClass("hidden");
+          $(".video-div").removeClass("hidden").addClass("flex flex-col items-center justify-center");
           $(".video").trigger("play");
-
           reset();
         })
         .catch((e) => {
-          $(".form").css({ display: "none" });
-          $(".video-div").css({ display: "flex" });
-          $(".video").trigger("play");
-
+          $(".form").addClass("hidden");
+          $(".video-div").removeClass("hidden").addClass("flex flex-col items-center justify-center");
+          $(".video").trigger("play")
           reset();
           console.log(e);
         });
@@ -68,11 +66,14 @@ const GetStartedSection = () => {
     <div
       className={`${inter.className} ${lato.className}  max-w-[1400px] xl:w-[1400px] px-[1.5em] mt-28`}
     >
-      <div className="hidden justify-center video-div">
-        <video muted className="video user-select-none">
+      <div className="hidden  justify-center video-div">
+        <video muted className="video user-select-none h-[19rem] w-96">
           <source src={"/video/formSubmitted.mp4"} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <Link href="/" className={`${inter.className} cursor-pointer my-2 border-2 text-center hover:bg-[#f35d9c] transition-all  border-black bg-[#FF72AC] rounded-md py-3 px-5 text-[#000]`}>
+          Back to Home
+        </Link>
       </div>
       <motion.div
         viewport={{ once: true }}
@@ -86,16 +87,16 @@ const GetStartedSection = () => {
             Let&apos;s Work <br /> Together
           </h1>
           <p className="lg:w-1/2 mt-5">
-            Exercitationem 30+ CLIENTS qui nemo sit rerum molestias suscipit
-            voluptatem. Esse optio aspernatur{" "}
+            We're excited to hear from you and learn more about how we can help you with your business needs. Contact us today to get started.
           </p>
           <div className="flex lg:flex-col flex-row lg:items-start items-center lg:my-0 my-5">
-            <h6 className=" lg:mt-5 lg:mb-3">Follow Us:</h6>
-            <p className="flex justify-between w-28 lg:ms-0 ms-3">
+            <h6 className=" lg:mt-5 lg:mb-3">Connect with us:</h6>
+            <p className="flex justify-between w-32 lg:ms-0 ms-3">
               {" "}
-              <BsTwitter className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " />{" "}
-              <BsInstagram className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " />{" "}
-              <BsLinkedin className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " />
+              <a target="_blank" href="https://twitter.com/realbrandopt"><BsTwitter className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
+              <a target="_blank" href="https://www.instagram.com/brandoptreal"> <BsInstagram className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
+              <a target="_blank" href="https://www.linkedin.com/company/brand-optimizer"> <BsLinkedin className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
+              <a target="_blank" href="https://t.me/vishnu_g04"> <BsTelegram className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
             </p>
           </div>
         </div>
@@ -214,7 +215,7 @@ const GetStartedSection = () => {
         </form>
       </motion.div>
       <div></div>
-    </div>
+    </div >
   );
 };
 

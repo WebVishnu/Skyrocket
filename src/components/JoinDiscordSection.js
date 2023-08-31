@@ -14,7 +14,7 @@ const JoinDiscordSection = () => {
         className=" w-full my-12"
       >
         <h1 className={`text-5xl text-center`}>
-          Out of <span className="text-[#FF72AC]">Budget?</span>
+          Join Our <span className="text-[#FF72AC]">Community</span>
         </h1>
         <h1 className="text-2xl text-center px-4">
           <br /> Join our Discord Server to Explore more Plans

@@ -20,15 +20,14 @@ export default function Home() {
   return (
     <main className={` ${inter.className}  flex items-center flex-col `}>
       <HeroSection />
-      
       <HowToWorkSection />
       <TestimonialSection/>
       {/* <IntroductionSection /> */}
-      {/* <ServicesSection /> */}
+      <ServicesSection />
       {/* <OurWorkSection/> */}
-      {/* <ReviewSection /> */}
+      <ReviewSection />
       {/* <GetStartedSection /> */}
-      <PricingSection/>
+      {/* <PricingSection/> */}
       <JoinDiscordSection/>
       {/* <FAQsection /> */}
       <FooterSection />

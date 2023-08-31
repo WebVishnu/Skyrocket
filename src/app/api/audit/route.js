@@ -1,13 +1,12 @@
 import { google } from "googleapis";
-import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const privateKey = process.env.PLACE_ORDER_GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
-    const { Name, Email, Budget, Category, CompanyName, Description } =
+    const privateKey = process.env.AUDIT_GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
+    const { website } =
       await request.json();
     const auth = new google.auth.JWT(
-      process.env.PLACE_ORDER_GOOGLE_CLIENT_EMAIL,
+      process.env.AUDIT_GOOGLE_CLIENT_EMAIL,
       null,
       privateKey,
       [
@@ -22,12 +21,12 @@ export async function POST(request) {
       auth,
     });
     const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.PLACE_ORDER_GOOGLE_SHEET_ID,
-      range: "Sheet1!A:F",
+      spreadsheetId: process.env.AUDIT_GOOGLE_SHEET_ID,
+      range: "Sheet1!A3:F",
       insertDataOption: "INSERT_ROWS",
       valueInputOption: "RAW",
       requestBody: {
-        values: [[Name, Email, Budget, Category, CompanyName, Description]],
+        values: [[website]],
       },
     });
     return new Response({
