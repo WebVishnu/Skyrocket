@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import RandomShapeAnimation from "./RandomShapeAnimation";
 import PercentageCounter from "./PercentageCounter";
 // import video from "/video/HeroSection.mp4"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -60,8 +62,8 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: "0" }}
               transition={{ ease: "easeOut", delay: 0.2 }}
             >
-              Optimize Your Site <br />
-              <span className="text-[#FF72AC]">in Just 7 Days! </span>
+              We Optimize your business <br />
+              <span className="text-[#FF72AC]"> with funnel websites </span>
               {/* <PercentageCounter targetPercentage={1} duration={3000} /> */}
             </motion.div>
           </h1>
@@ -70,13 +72,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: "20px" }}
             whileInView={{ opacity: 1, y: "0" }}
             transition={{ ease: "easeOut", delay: 0.3 }}
-            className=" text-center"
+            className="text-center"
           >
             <p
               className={`mb-8 md:text-lg text-sm md:max-w-[60%] mx-auto ${inter.className}`}
             >
-              Turning your business into brand. <br />
-              Plans Starting from $1500 
+              We design and develop websites that help you increase your leads, conversions, and sales.
             </p>
           </motion.div>
           <motion.div
@@ -84,13 +85,19 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: "20px" }}
             whileInView={{ opacity: 1, y: "0" }}
             transition={{ ease: "easeOut", delay: 0.4 }}
-            className="flex justify-center w-full"
+            className="flex sm:flex-no-wrap flex-wrap justify-center w-full"
           >
-            <a href="#pricing-section">
-              <button className=" border-2 boredr-white md:px-20 px-10 py-3 rounded-lg hover:bg-white hover:text-black transition-all">
-                Get Started Now
+            <Link href="#review-section">
+              <button className="border-2 border-white md:px-15 px-10 py-3 rounded-lg hover:bg-white hover:text-black transition-all">
+                Get Free Audit
               </button>
-            </a>
+            </Link>
+
+            <Link href="/contact">
+              <button className="md:px-10 px-5 py-3">
+                Place Order
+              </button>
+            </Link>
           </motion.div>
         </div>
         {/* <RandomShapeAnimation/> */}
