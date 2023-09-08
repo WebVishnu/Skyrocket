@@ -32,13 +32,13 @@ const page = () => {
         <p className="mb-4">
           As mentioned above, the upfront payment of 30% is non-refundable. Once
           this payment has been made, there will be no refunds issued,
-          regardless of the project's status or circumstances.
+          regardless of the project&apos;s status or circumstances.
         </p>
 
         <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
         <p className="mb-4">
           If you have any questions or concerns about our Cancellation & Refund
-          Policy, please don't hesitate to contact us. We are here to assist you
+          Policy, please don&apos;t hesitate to contact us. We are here to assist you
           and provide clarity on our policies.
         </p>
       </div>

@@ -72,7 +72,7 @@ const page = () => {
 
         <p className="mb-4">
           By using our services, you consent to the terms outlined in this
-          Privacy Policy. If you have any questions or concerns, please don't
+          Privacy Policy. If you have any questions or concerns, please don&apos;t
           hesitate to contact us.
         </p>
       </div>

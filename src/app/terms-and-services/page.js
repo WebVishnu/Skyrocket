@@ -14,7 +14,7 @@ const page = () => {
         <h2 className="text-2xl font-semibold mb-4">Terms and Services</h2>
         <p className="mb-4">
           Welcome to BrandOPT, your trusted partner in creating custom
-          funnel-based websites designed to enhance your customer's conversion
+          funnel-based websites designed to enhance your customer&apos;s conversion
           rates. Please take a moment to review our Terms and Services. By using
           our services, you agree to comply with and be bound by the following
           terms and conditions.
@@ -37,7 +37,7 @@ const page = () => {
             Create tailored websites that guide visitors towards conversion.
           </li>
           <li>
-            <span className="font-bold">Unlimited Revisions:</span> We're
+            <span className="font-bold">Unlimited Revisions:</span> We&apos;re
             committed to your satisfaction; hence, we offer unlimited revisions
             during the project.
           </li>
@@ -97,7 +97,7 @@ const page = () => {
         <p className="mb-4">
           By engaging our services, you acknowledge that you have read,
           understood, and agreed to these Terms and Services. If you have any
-          questions or concerns, please don't hesitate to contact us.
+          questions or concerns, please don&apos;t hesitate to contact us.
         </p>
         <p className="text-gray-600">
           Thank you for choosing BrandOPT as your partner in achieving online
