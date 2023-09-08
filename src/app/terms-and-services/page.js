@@ -1,12 +1,19 @@
+"use client";
 import React from "react";
-
+import { motion } from "framer-motion";
 const page = () => {
   return (
-    <div className="bg-gray-100 min-h-screen py-12">
+    <motion.div
+      viewport={{ once: true }}
+      initial={{ opacity: 0, y: "-10px" }}
+      whileInView={{ opacity: 1, y: "0" }}
+      transition={{ ease: "easeOut" }}
+      className="min-h-screen py-12 mt-12"
+    >
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4">Terms and Services</h2>
         <p className="mb-4">
-          Welcome to [Your Agency Name], your trusted partner in creating custom
+          Welcome to BrandOPT, your trusted partner in creating custom
           funnel-based websites designed to enhance your customer's conversion
           rates. Please take a moment to review our Terms and Services. By using
           our services, you agree to comply with and be bound by the following
@@ -93,11 +100,11 @@ const page = () => {
           questions or concerns, please don't hesitate to contact us.
         </p>
         <p className="text-gray-600">
-          Thank you for choosing [Your Agency Name] as your partner in achieving
-          online success.
+          Thank you for choosing BrandOPT as your partner in achieving online
+          success.
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
