@@ -27,19 +27,19 @@ const services = [
     desc: "Improve your website's search engine ranking so that more people can find you online."
   },
   {
-    name: "Logo Designing",
-    logo: "cib-adobe-illustrator.svg",
-    desc: "We Create a memorable and eye-catching logo that represents your brand"
+    name: "Content & Copywriting",
+    logo: "lucide-pencil-line.svg",
+    desc: "We'll write content and copy for up to 20 pages, including your website's core pages."
   },
   {
-    name: "Ads Banner Designing",
+    name: "Google Analytics ",
     logo: "mdi-google-ads.svg",
-    desc: "Design effective and engaging ads banners that will help you reach your target audience."
+    desc: "We'll set up Google Analytics for you so you can track your website traffic."
   },
   {
-    name: "Social Media Content",
+    name: "Google Business Setup",
     logo: "heart-in-hand.svg",
-    desc: " Create high-quality social media content that will engage your audience."
+    desc: "We'll set up and optimize your Google My Business listing, complete with all details."
   },
 ]
 
@@ -55,7 +55,7 @@ const ServicesSection = () => {
         className="mt-28"
       >
         <SectionHeader
-          title="Premium Services, One Place"
+          title="Everything You Need"
         />
       </motion.div>
       <motion.div

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import RandomShapeAnimation from "./RandomShapeAnimation";
 import PercentageCounter from "./PercentageCounter";
 // import video from "/video/HeroSection.mp4"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 import { Inter } from "next/font/google";
 import Link from "next/link";
@@ -14,7 +14,10 @@ const inter = Inter({ subsets: ["latin"], weight: ["400"] });
 
 const HeroSection = () => {
   return (
-    <div className="h-screen  w-screen relative bg-black flex flex-col" id="hero-section">
+    <div
+      className="h-screen  w-screen relative bg-black flex flex-col"
+      id="hero-section"
+    >
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0, y: "20px" }}
@@ -62,8 +65,9 @@ const HeroSection = () => {
               whileInView={{ opacity: 1, y: "0" }}
               transition={{ ease: "easeOut", delay: 0.2 }}
             >
-              We Optimize your business <br />
-              <span className="text-[#FF72AC]"> with funnel websites </span>
+              We Create{" "}
+              <span className="text-[#FF72AC]"> funnel websites <br /> </span> for
+               business owners <br />
               {/* <PercentageCounter targetPercentage={1} duration={3000} /> */}
             </motion.div>
           </h1>
@@ -77,7 +81,8 @@ const HeroSection = () => {
             <p
               className={`mb-8 md:text-lg text-sm md:max-w-[60%] mx-auto ${inter.className}`}
             >
-              We design and develop websites that help you increase your leads, conversions, and sales.
+              We design and develop websites that help you increase your leads,
+              conversions, and sales.
             </p>
           </motion.div>
           <motion.div
@@ -94,9 +99,7 @@ const HeroSection = () => {
             </Link>
 
             <Link href="/contact">
-              <button className="md:px-10 px-5 py-3">
-                Place Order
-              </button>
+              <button className="md:px-10 px-5 py-3">Place Order</button>
             </Link>
           </motion.div>
         </div>

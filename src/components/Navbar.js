@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BsDiscord } from "react-icons/bs";
+import { BsClock, BsDiscord } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -25,8 +25,8 @@ const Navbar = () => {
       viewport={{ once: true }}
       initial={{ opacity: 0, y: "-10px" }}
       whileInView={{ opacity: 1, y: "0" }}
-      transition={{ease: "easeOut"}}
-      style={{backgroundColor:"#fff"}}
+      transition={{ ease: "easeOut" }}
+      style={{ backgroundColor: "#fff" }}
       className={`navbar ${lato.className} 2xl:px-[10em] px-[1em] py-[10px] grid grid-cols-3 place-items-center place-content-center  top-0 left-0 fixed w-[100vw] bg-black  z-30 border-b-2 border-[#000]`}
     >
       <div className="place-self-start">
@@ -50,16 +50,16 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="place-self-end justify-self-end">
-        <a href="https://discord.gg/k43uEbHzbA" target="_blank">
+        <Link href="https://calendly.com/brandoptofficial/30min" target="_blank">
           <button
-            className={`rounded-lg hover:bg-black hover:text-white transition-all bg-transparent py-2 px-5 text-sm flex items-center whitespace-nowrap border-2 border-black`}
+            className={`rounded-lg border-2 border-black hover:bg-black transition-all hover:text-white py-2 px-8 text-lg flex items-center whitespace-nowrap`}
           >
-            Join Discord&nbsp;&nbsp;&nbsp;
+            Schedule a Call&nbsp;&nbsp;&nbsp;
             <span className="text-xl">
-              <BsDiscord />
+              <BsClock />
             </span>
           </button>
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

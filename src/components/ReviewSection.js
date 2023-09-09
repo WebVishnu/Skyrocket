@@ -15,13 +15,12 @@ const lato = Lato({ subsets: ["latin"], weight: ["700", "900"] });
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], weight: ["700"] });
 
-
 // Schema for form validation
 const schema = yup.object().shape({
   website: yup.string().required("Please enter your website"),
 });
 
-const ReviewSection = () => { 
+const ReviewSection = () => {
   const {
     control,
     handleSubmit,
@@ -38,7 +37,7 @@ const ReviewSection = () => {
           website: data.website,
         })
         .then((res) => {
-          console.log(res)
+          console.log(res);
           $(".submitBtn").html("Submit").attr("type", "submit");
           reset();
         })
@@ -50,7 +49,6 @@ const ReviewSection = () => {
       console.error("Error fetching data:", error);
     }
   };
-
 
   return (
     <div
@@ -130,26 +128,38 @@ const ReviewSection = () => {
                 Actionable Feedback and Insights
               </li>
             </ul>
-            <form onSubmit={handleSubmit(submitAudit)} className="flex items-center justify-start relative mt-7">
+            <form
+              onSubmit={handleSubmit(submitAudit)}
+              className="flex items-center justify-start relative mt-7"
+            >
               <Controller
                 name="website"
                 control={control}
                 defaultValue=""
                 render={({ field }) => (
-                  <input type="text" placeholder="www.yoursite.com" className="border border-black py-4 px-5 pe-36 rounded-lg w-full" {...field} />
+                  <input
+                    type="text"
+                    placeholder="www.yoursite.com"
+                    className="border border-black py-4 px-5 pe-36 rounded-lg w-full"
+                    {...field}
+                  />
                 )}
               />
               {errors.website && (
                 <span className="text-red-700">{errors.website.message}</span>
               )}
               <button className="submitBtn px-8 py-2 border-2 border-black rounded-lg absolute right-2 hover:bg-black hover:text-white transition-all">
-              Submit
+                Submit
               </button>
             </form>
           </div>
         </div>
       </motion.div>
-      <div id="get-started-section">&nbsp;</div>
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/brandoptofficial/30min"
+        style={{ height: "700px", minWidth: "320px" }}
+      ></div>
     </div>
   );
 };

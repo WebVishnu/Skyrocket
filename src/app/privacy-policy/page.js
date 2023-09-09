@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const page = () => {
   return (
+    <>
     <motion.div
       viewport={{ once: true }}
       initial={{ opacity: 0, y: "-10px" }}
@@ -77,6 +78,7 @@ const page = () => {
         </p>
       </div>
     </motion.div>
+    </>
   );
 };
 

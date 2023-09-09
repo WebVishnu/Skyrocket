@@ -3,8 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
-    const privateKey = process.env.PLACE_ORDER_GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n");
-    const { Name, Email, Budget, Category, CompanyName, Description } =
+    const privateKey = process.env.PLACE_ORDER_GOOGLE_PRIVATE_KEY.replace(
+      /\\n/g,
+      "\n"
+    );
+    const { Name, Phone, Email, Budget, Category, CompanyName, Description } =
       await request.json();
     const auth = new google.auth.JWT(
       process.env.PLACE_ORDER_GOOGLE_CLIENT_EMAIL,
@@ -23,11 +26,13 @@ export async function POST(request) {
     });
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.PLACE_ORDER_GOOGLE_SHEET_ID,
-      range: "Sheet1!A:F",
+      range: "Sheet1!A2:F",
       insertDataOption: "INSERT_ROWS",
       valueInputOption: "RAW",
       requestBody: {
-        values: [[Name, Email, Budget, Category, CompanyName, Description]],
+        values: [
+          [Name, Phone, Email, Budget, Category, CompanyName, Description],
+        ],
       },
     });
     return new Response({

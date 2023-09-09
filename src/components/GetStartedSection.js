@@ -6,7 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import axios from "axios";
 import $ from "jquery";
-import { BsInstagram, BsLinkedin, BsTelegram, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin, BsTelegram, BsTwitter } from "react-icons/bs";
 import Link from "next/link";
 // fonts
 import { Lato } from "next/font/google";
@@ -18,9 +18,10 @@ const inter = Inter({ subsets: ["latin"], weight: ["600"] });
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
   email: yup.string().required("Email is required"),
+  phone: yup.string().required("Phone number is required"),
   budget: yup.string(),
-  category: yup.string().required("Please Select Category"),
-  companyName: yup.string().required("Company name is required"),
+  category: yup.string(),
+  companyName: yup.string(),
   description: yup.string().required("Description name is required"),
 });
 
@@ -40,9 +41,10 @@ const GetStartedSection = () => {
         .post(`/api/contact`, {
           Name: data.name,
           Email: data.email,
-          Budget: data.budget,
-          Category: data.category,
-          CompanyName: data.companyName,
+          Phone: data.phone,
+          Budget: "",
+          Category: "",
+          CompanyName: "",
           Description: data.description,
         })
         .then((res) => {
@@ -95,7 +97,7 @@ const GetStartedSection = () => {
               {" "}
               <a target="_blank" href="https://twitter.com/realbrandopt"><BsTwitter className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
               <a target="_blank" href="https://www.instagram.com/brandoptreal"> <BsInstagram className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
-              <a target="_blank" href="https://www.linkedin.com/company/brand-optimizer"> <BsLinkedin className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
+              <a target="_blank" href="https://www.facebook.com/vishnu.g05"> <BsFacebook className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
               <a target="_blank" href="https://t.me/vishnu_g04"> <BsTelegram className="cursor-pointer hover:text-[#FF72AC] text-xl transition-all " /></a>
             </p>
           </div>
@@ -137,6 +139,22 @@ const GetStartedSection = () => {
             <span className="text-red-700">{errors.email.message}</span>
           )}
           <Controller
+            name="phone"
+            control={control}
+            defaultValue=""
+            render={({ field }) => (
+              <input
+                type="text"
+                className={`${inter.className} my-2 border-2  border-black w-full rounded-md py-3 px-5 text-[#7e7e7e]`}
+                placeholder="Mobile"
+                {...field}
+              />
+            )}
+          />
+          {errors.phone && (
+            <span className="text-red-700">{errors.phone.message}</span>
+          )}
+          {/* <Controller
             name="budget"
             control={control}
             defaultValue="null"
@@ -156,8 +174,8 @@ const GetStartedSection = () => {
           />
           {errors.budget && (
             <span className="text-red-700">{errors.budget.message}</span>
-          )}
-          <Controller
+          )} */}
+          {/* <Controller
             name="category"
             control={control}
             defaultValue="Start a new Brand"
@@ -173,8 +191,8 @@ const GetStartedSection = () => {
           />
           {errors.category && (
             <span className="text-red-700">{errors.category.message}</span>
-          )}
-          <Controller
+          )} */}
+          {/* <Controller
             name="companyName"
             control={control}
             defaultValue=""
@@ -189,7 +207,7 @@ const GetStartedSection = () => {
           />
           {errors.companyName && (
             <span className="text-red-700">{errors.companyName.message}</span>
-          )}
+          )} */}
           <Controller
             name="description"
             control={control}
@@ -198,7 +216,7 @@ const GetStartedSection = () => {
               <textarea
                 className={`${inter.className} my-2 border-2  border-black w-full rounded-md py-3 px-5 text-[#7e7e7e]`}
                 rows={4}
-                placeholder="Type your text here..."
+                placeholder="Describe your project"
                 {...field}
               />
             )}
