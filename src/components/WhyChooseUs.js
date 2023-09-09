@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
               <span>1. </span>Outdated design:{" "}
             </span>{" "}
             <p className={`${inter.className} ms-6`}>
-              Your website looks like it's from the 1990s.
+              Your website looks like it&apos;s from the 1990s.
             </p>
           </li>
           <hr className="my-4" />
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
               <span>2. </span>Built with a drag-and-drop website builder:{" "}
             </span>{" "}
             <p className={`${inter.className} ms-6`}>
-              It's clear that your website was built with a generic website
+              It&apos;s clear that your website was built with a generic website
               builder, like GoDaddy, Squarespace, Wix, Weebly, Yellowpages, or
               Townsquare.
             </p>
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
               <span>3.</span>Embarrassing to show customers:{" "}
             </span>{" "}
             <p className={`${inter.className} ms-6`}>
-            You're embarrassed to show your website to potential customers.
+            You&apos;re embarrassed to show your website to potential customers.
             </p>
           </li>
           <hr className="my-4"/> */}
@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
               <span>3. </span>Bad content:{" "}
             </span>{" "}
             <p className={`${inter.className} ms-6`}>
-              Your content is boring, generic, and doesn't say anything
+              Your content is boring, generic, and doesn&apos;t say anything
               different than your competition.
             </p>
           </li>
@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
               <span>5.</span>Outdated project photos:{" "}
             </span>{" "}
             <p className={`${inter.className} ms-6`}>
-            You haven't updated your project photos in months or even years.
+            You haven&apos;t updated your project photos in months or even years.
             </p>
           </li>
           <hr className="my-4"/> */}
